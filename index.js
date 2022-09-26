@@ -14,9 +14,9 @@ dateContainer.append(curentDate);
 
 const updateTime = () => {
   curentDate.innerText = DateTime.now();
-}
+};
 
-setInterval (updateTime, 1000);
+setInterval(updateTime, 1000);
 
 class StandardBooks {
   constructor() {

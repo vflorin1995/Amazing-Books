@@ -1,0 +1,117 @@
+/* css resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1rem;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 4rem;
+}
+
+h3 {
+  margin-right: 2rem;
+}
+
+/* utility classes */
+.flex {
+  display: flex;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+
+.divider__line {
+  border-left: 2px solid black;
+  height: 20px;
+}
+
+/* nav */
+.nav {
+  padding: 1rem;
+  border: 2px solid black;
+}
+
+.items {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+/* booklist */
+.bookList {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+/* form */
+.form {
+  flex-direction: column;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.input {
+  width: 100%;
+  margin: 1rem 0;
+  height: 2rem;
+}
+
+.submit {
+  margin: 1rem auto;
+  padding: 0.5rem 3rem;
+  filter: drop-shadow(2px 2px 2px);
+}
+
+/* contact-me */
+p {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.contact-items {
+  flex-direction: column;
+  line-height: 1.5rem;
+  width: 100%;
+  max-width: 20rem;
+  margin: 2rem auto;
+}
+
+/* footer */
+footer {
+  position: fixed;
+  width: calc(100% - 2rem);
+  bottom: 1rem;
+}
+
+.footer {
+  border: 2px solid black;
+  padding: 1rem 0;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+.align-center {
+  align-items: center;
+}

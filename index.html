@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>            
+  <title>Awesome Books</title>
+</head>
+<body>
+  <nav class="nav flex space-btw">
+    <div class="logo">Awesome Books</div>
+    <ul class="nav-items flex">
+      <li class="items listBtn">List</li>
+      <li class="divider__line"></li>
+      <li class="items addBtn">Add New</li>
+      <li class="divider__line"></li>
+      <li class="items contactBtn">Contact</li>
+    </ul>
+  </nav>
+  <section class="books">
+    <h1>All awesome Books</h1>
+    <div class="bookList"></div>
+  </section>
+  <section class="add-book displayNone">
+    <h1>Add A New Book</h1>
+    <form class="form flex">
+      <label for="Title">
+        <input class="title input" name="book title" type="text" placeholder="Title" maxlength="30" required>
+      </label>
+      <label for="Author">
+        <input class="author input" name="book name" type="text" placeholder="Author" maxlength="30" required>
+      </label>
+      <button class="submit" type="button">Add</button>
+    </form>
+  </section>
+  <section class="contact-me displayNone">
+    <h1>Contact Information</h1>
+    <p>Do you have any questions or you just want to say 'hello'?<br>You can reach out to us!</p>
+    <ul class="contact-items flex">
+      <li>Our e-mail ...</li>
+      <li>Our phone number +148938943483</li>
+      <li>Our address; street name 22 o4 defcounty</li>
+    </ul>
+  </section>
+  <footer>
+    <p class="footer">&copy Ikon - Juhar - Florin</p>
+  </footer>
+</body>
+</html>

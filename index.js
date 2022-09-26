@@ -1,15 +1,22 @@
-/* eslint-disable max-classes-per-file */
+import updateLocalStorage from './modules/update_local_storage.js';
+import getData from './modules/get_local_storage.js';
+import StandardBook from './modules/creat_book.js';
+import { DateTime } from './modules/luxon.min.js';
+
 const bookList = document.querySelector('.bookList');
 const submit = document.querySelector('.submit');
 const title = document.querySelector('.title');
 const author = document.querySelector('.author');
 
-class StandardBook {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
+const dateContainer = document.getElementById('date');
+const curentDate = document.createElement('div');
+dateContainer.append(curentDate);
+
+const updateTime = () => {
+  curentDate.innerText = DateTime.now();
 }
+
+setInterval (updateTime, 1000);
 
 class StandardBooks {
   constructor() {
@@ -36,22 +43,12 @@ initialBook.addBook('title1', 'author1');
 initialBook.addBook('title2', 'author2');
 initialBook.addBook('title3', 'author3');
 
-function getData() {
-  const localdata = localStorage.getItem('localdata');
-  const dataStored = JSON.parse(localdata);
-  if (dataStored) {
-    initialBook.books = dataStored;
-  }
+const dataStored = getData();
+if (dataStored) {
+  initialBook.books = dataStored;
 }
 
-getData();
-
-function updateLocalStorage() {
-  const localdata = JSON.stringify(initialBook.books);
-  localStorage.setItem('localdata', localdata);
-}
-
-function displayBook() {
+const displayBook = () => {
   bookList.innerText = '';
   initialBook.allBooks.forEach((standBook) => {
     const containerTAB = document.createElement('div');
@@ -89,8 +86,8 @@ function displayBook() {
       displayBook();
     });
   });
-  updateLocalStorage();
-}
+  updateLocalStorage(initialBook.books);
+};
 displayBook();
 
 submit.addEventListener('click', () => {
@@ -101,8 +98,6 @@ submit.addEventListener('click', () => {
   author.value = '';
   displayBook();
 });
-
-// adding stuff
 
 const listBtn = document.querySelector('.listBtn');
 const addBtn = document.querySelector('.addBtn');

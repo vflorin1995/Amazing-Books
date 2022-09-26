@@ -115,3 +115,7 @@ hr {
 .align-center {
   align-items: center;
 }
+
+#date {
+  justify-content: flex-end;
+}
